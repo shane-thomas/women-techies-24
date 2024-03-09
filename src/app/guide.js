@@ -5,11 +5,10 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useState, useEffect } from "react";
 import * as Location from "expo-location";
 import React from "react";
-import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Guide() {
   const [location, setLocation] = useState({});
-  const [errorMsg, setErrorMsg] = useState(null);
+  // const [errorMsg, setErrorMsg] = useState(null);
 
   useEffect(() => {
     (async () => {

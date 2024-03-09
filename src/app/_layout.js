@@ -7,11 +7,11 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarInactiveTintColor: "black",
-        tabBarActiveTintColor:"white",
+        tabBarActiveTintColor: "white",
         headerShown: false,
         tabBarStyle: {
           backgroundColor: "pink",
-        //   tabBarActiveTintColor: "red",
+          //   tabBarActiveTintColor: "red",
           zIndex: 999,
         },
       }}
@@ -21,7 +21,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size ={28} name="home" color={color} />
+            <FontAwesome size={28} name="home" color={color} />
           ),
         }}
       />
@@ -30,7 +30,7 @@ export default function TabLayout() {
         options={{
           title: "Guide",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size ={28} name="compass" color={color} />
+            <FontAwesome size={28} name="compass" color={color} />
           ),
         }}
       />
@@ -39,8 +39,8 @@ export default function TabLayout() {
         options={{
           title: "Blog",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size ={28} name="plus-circle" color={color} />
-          ),  
+            <FontAwesome size={28} name="plus-circle" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -48,8 +48,8 @@ export default function TabLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size ={28} name="user" color={color} />
-          ),  
+            <FontAwesome size={28} name="user" color={color} />
+          ),
         }}
       />
     </Tabs>

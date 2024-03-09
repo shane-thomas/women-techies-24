@@ -3,10 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Page() {
   return (
     <View style={styles.container}>
-      <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
-      </View>
+      <Text style={styles.title}>Lorem Ipsum</Text>
+      <Text style={styles.subtitle}>Lorem Ipsum</Text>
     </View>
   );
 }
@@ -15,20 +13,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    backgroundColor: "black",
     padding: 24,
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
   },
   title: {
     fontSize: 64,
+    color: "white",
     fontWeight: "bold",
   },
   subtitle: {
     fontSize: 36,
-    color: "#38434D",
+    color: "white",
   },
 });
