@@ -6,15 +6,18 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dorororro.weathertechies24"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,7 +28,11 @@
         "googleMaps": {
           "apiKey": "AIzaSyD5960zRGCkdFdYlL62z41u2sH5-98Nzuc"
         }
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.dorororro.weathertechies24"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -42,9 +49,23 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/FamiljenGrotesk.ttf"]
+          "fonts": [
+            "node_modules/@expo-google-fonts/roboto/Roboto_400Regular.ttf",
+            "node_modules/@expo-google-fonts/Poppins/Poppins_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/familjen-grotesk/FamiljenGrotesk_700Bold.ttf",
+            "node_modules/@expo-google-fonts/familjen-grotesk/FamiljenGrotesk_400Regular.ttf",
+            "node_modules/@expo-google-fonts/roboto/Roboto_500Medium.ttf"
+          ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "fbe622ea-04c6-45fe-ba06-d03752160439"
+      }
+    }
   }
 }
