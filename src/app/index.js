@@ -9,7 +9,9 @@ import { db } from "./../../firebaseConfig";
 import BlogMedium from "../components/blogMedium";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-import { useFonts } from 'expo-font';
+import { FamiljenGrotesk_400Regular, FamiljenGrotesk_700Bold, useFonts } from "@expo-google-fonts/familjen-grotesk";
+import { SafeAreaView } from "react-native-safe-area-context";
+import AppLoading from "expo-app-loading";
 
 
 export default function Page() {
@@ -17,9 +19,8 @@ export default function Page() {
   const [refreshing, setRefreshing] = useState(false);
 
   const [fontsLoaded] = useFonts({
-    'FamiljenGrotesk': require('./../../assets/fonts/FamiljenGrotesk.ttf'),
+    FamiljenGrotesk_400Regular, FamiljenGrotesk_700Bold
   });
-
   const onRefresh = async () => {
     setRefreshing(true);
     try {
@@ -55,8 +56,18 @@ export default function Page() {
   }, []); // Empty dependency array to fetch blogs only once on component mount
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Hello <Text style={[styles.title, { fontWeight: "bold" }]}>Shane!</Text></Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={[styles.title, {fontFamily: "FamiljenGrotesk_400Regular"}]}>Hello <Text style={[styles.title, { fontFamily: "FamiljenGrotesk_700Bold" }]}>Shane!</Text></Text>
+      <View
+        style={{
+          borderColor: "#C4C4C4",
+          borderWidth: 1,
+          margin: 10,
+          alignSelf: "center",
+          width: "100%",
+          margin: 20,
+        }}
+      />
       <ScrollView
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
@@ -74,7 +85,7 @@ export default function Page() {
           </View>
         ))}
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -90,7 +101,6 @@ const styles = StyleSheet.create({
     textAlign:"center",
     fontSize: 36,
     color: "#E746A6",
-    // fontWeight: "bold",
-    fontFamily: "FamiljenGrotesk"
+    
   },
 });
